@@ -1,6 +1,6 @@
 Basic usage
 ```
-python
+"""python"""
 import asyncio
 from sapna import Deebot
 
@@ -27,7 +27,7 @@ asyncio.run(main())
 ```
 First time only — verify
 ```
-python
+"""python"""
 async def first_time():
     bot = Deebot(...)
     await bot.verify()    # sends email, asks for code
@@ -37,7 +37,7 @@ async def first_time():
 ```
 Context manager style
 ```
-python
+"""python"""
 async def main():
     async with Deebot(...) as bot:
         await bot.clean()
@@ -46,7 +46,7 @@ async def main():
 ```
 Check state + battery anytime
 ```
-python
+"""python"""
 await bot.connect()
 await asyncio.sleep(3)   # let events flush
 print(bot.state)    # "DOCKED"
