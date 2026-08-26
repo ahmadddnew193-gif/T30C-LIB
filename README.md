@@ -1,3 +1,21 @@
+
+
+but first follow these:
+
+    """
+    Simple async library for controlling an Ecovacs Deebot via MQTT.
+
+    Parameters
+    ----------
+    account_id  : str  — Ecovacs app email
+    password    : str  — Ecovacs app password (plaintext, hashed internally)
+    country     : str  — ISO 3166-1 alpha-2 country code e.g. "IQ", "US", "DE"
+    device_id   : str  — Stable 32-char hex ID (generate once, never change)
+                         py -c "import hashlib,uuid; print(hashlib.md5(str(uuid.uuid4()).encode()).hexdigest())"
+    device_name : str  — Nickname of your robot in the Ecovacs app (default "Sapna")
+    """
+
+
 Basic usage
 ```
 """python"""
