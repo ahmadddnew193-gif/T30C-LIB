@@ -1,4 +1,5 @@
 Basic usage
+'''
 python
 import asyncio
 from sapna import Deebot
@@ -23,7 +24,9 @@ async def main():
     await bot.disconnect()
 
 asyncio.run(main())
+'''
 First time only — verify
+'''
 python
 async def first_time():
     bot = Deebot(...)
@@ -31,16 +34,21 @@ async def first_time():
     await bot.connect()   # works from now on forever
     await bot.clean()
     await bot.disconnect()
-Context manager style 😤
+'''
+Context manager style
+'''
 python
 async def main():
     async with Deebot(...) as bot:
         await bot.clean()
         await asyncio.sleep(60)
         await bot.dock()
+'''
 Check state + battery anytime
+'''
 python
 await bot.connect()
 await asyncio.sleep(3)   # let events flush
 print(bot.state)    # "DOCKED"
 print(bot.battery)  # 87
+'''
