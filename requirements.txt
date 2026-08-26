@@ -1,0 +1,3 @@
+aiohttp>=3.9.0
+certifi>=2024.0.0
+deebot-client @ git+https://github.com/bentbrain/client.py.git@agent/device-verification
