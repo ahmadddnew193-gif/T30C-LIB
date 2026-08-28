@@ -103,7 +103,7 @@ class Deebot:
     async def _on_error(self, e: ErrorEvent):
         if e.code != 0:
             self.error = (e.code, e.description)
-            log.warning(f"⚠️  Error [{e.code}]: {e.description}")
+            log.warning(f" Error [{e.code}]: {e.description}")
 
     # ── PUBLIC API ────────────────────────────────────────────────
 
@@ -125,7 +125,7 @@ class Deebot:
             authenticator = Authenticator(rest_config, self.account_id, self._password_hash)
 
             await authenticator.request_device_verification_code()
-            print(f"📧 Check your email for the Ecovacs verification code.")
+            print(f"Check your email for the Ecovacs verification code.")
 
             code = input("   Enter code: ").strip()
             await authenticator.verify_device(code)
@@ -168,7 +168,7 @@ class Deebot:
             ),
             devices.mqtt[0],
         )
-        log.info(f"🤖 Found: {getattr(target, 'nick', target)}")
+        log.info(f" Found: {getattr(target, 'nick', target)}")
 
         self._bot = Device(target, self._authenticator)
         self._bot.events.subscribe(StateEvent,   self._on_state)
@@ -182,7 +182,7 @@ class Deebot:
         await self._bot.initialize(self._mqtt)
 
         await asyncio.sleep(3)   # let initial events flush
-        log.info("✅ Connected to Sapna! 🚀")
+        log.info("✅ Connected to Sapna! ")
 
     async def clean(self) -> None:
         """Start cleaning."""
@@ -205,7 +205,7 @@ class Deebot:
     async def dock(self) -> None:
         """Send robot back to dock."""
         self._require_connected()
-        log.info("🏠 Returning to dock...")
+        log.info(" Returning to dock...")
         await self._bot.execute_command(Charge())
 
     async def disconnect(self) -> None:
@@ -228,3 +228,15 @@ class Deebot:
 
     async def __aexit__(self, *_):
         await self.disconnect()
+
+
+
+
+
+
+def silence_gibberish():
+    """Suppresses aiohttp unclosed session warnings and resource noise."""
+    warnings.filterwarnings("ignore", category=ResourceWarning)
+    warnings.filterwarnings("ignore", category=DeprecationWarning)
+    logging.getLogger("aiohttp").setLevel(logging.CRITICAL)
+    logging.getLogger("asyncio").setLevel(logging.CRITICAL)
