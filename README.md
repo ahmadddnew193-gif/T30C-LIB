@@ -70,3 +70,4 @@ await asyncio.sleep(3)   # let events flush
 print(bot.state)    # "DOCKED"
 print(bot.battery)  # 87
 ```
+Ifu wanna silence the gibberish aio warning uncliosed things do this function: silence_gibberish()
