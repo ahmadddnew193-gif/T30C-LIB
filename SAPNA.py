@@ -1,5 +1,5 @@
 """
-sapna.py — Ecovacs Deebot T30C Python Library  v4.0
+sapna.py — Ecovacs Deebot T30C Python Library  v6.0
 =====================================================
 Install core:
     pip install "git+https://github.com/bentbrain/client.py.git@agent/device-verification" aiohttp certifi
@@ -17,46 +17,6 @@ Optional extras:
     pip install notion-client               # notion logging
     pip install pyngrok                     # REMOVED — use Cloudflare Tunnel instead (free, works everywhere)
 
-NEW in v4:
-  ✅ Hey Siri integration (Apple Shortcuts bridge)
-  ✅ Ngrok tunnel (control Sapna from anywhere, not just home WiFi)
-  ✅ Google Sheets live session logging
-  ✅ Notion database logging
-  ✅ Text-to-speech voice responses (offline + AI)
-  ✅ Achievement system with Discord badges
-  ✅ Gamification: XP + level system
-  ✅ Carbon footprint tracker
-  ✅ Pet hair seasonal mode
-  ✅ Vacation mode
-  ✅ Maintenance tracking (brush/filter/mop)
-  ✅ Weekly heatmap
-  ✅ Anomaly detector
-  ✅ Coverage estimator
-  ✅ Stuck pattern map
-  ✅ Allergy mode (pollen API)
-  ✅ iCal calendar (clean before events)
-  ✅ Baby sleep guard
-  ✅ Morning/bedtime routines
-  ✅ Solar power mode
-  ✅ Guest detection
-  ✅ Weather-based scheduling
-  ✅ Auto-resume after charge
-  ✅ Silent windows
-  ✅ Clean roulette
-  ✅ Weekly/monthly auto-reports
-  ✅ Alert if no clean in N days
-  ✅ Humidity tracker
-  ✅ Home Assistant entity sync
-  ✅ Apple Shortcuts server
-
-NEW in v6 — Voice/remote control that actually works everywhere:
-  ✅ Telegram Bot (/clean /dock /pause — works in IQ + everywhere)
-  ✅ WhatsApp Bot (send "clean" via Twilio WhatsApp)
-  ✅ Google Assistant via IFTTT (Hey Google, clean the house)
-  ✅ Alexa via webhook routine (Alexa, clean the house)
-  ✅ NFC tag support (tap phone on sticker → Sapna cleans)
-  ✅ Beautiful home screen widget server (one-tap web UI)
-  ✅ Cloudflare Tunnel (free, works in Iraq + every country)
 """
 
 import ssl
