@@ -117,4 +117,4 @@ NEW in v6 — Voice/remote control that actually works everywhere:
   ✅ Cloudflare Tunnel (free, works in Iraq + every country)
 
 
-Ifu wanna silence the gibberish aio warning uncliosed things do this function: silence_gibberish()
+If u wanna silence the gibberish aio warning unclosed things do this function: silence_gibberish()
